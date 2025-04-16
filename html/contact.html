@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio de ARIES SMAIL</title>
+    <meta name="description" content="Contactez ARIES SMAIL - BTS SIO SISR">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Overlay pour le menu mobile -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="collapsed">
+        <div class="burger-menu">
+            <div class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a class="logo">
+                    <i class="fas fa-bars"></i>
+                    <span class="nav-item">Menu</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-item">Accueil</span>
+                </a>
+            </li>
+            <li>
+                <a href="parcours.html">
+                    <i class="fas fa-user-graduate"></i>
+                    <span class="nav-item">Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="bts-sio.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="nav-item">BTS SIO</span>
+                </a>
+            </li>
+            <li>
+                <a href="projets-scolaires.html">
+                    <i class="fas fa-file-alt"></i>
+                    <span class="nav-item">Projets scolaires</span>
+                </a>
+            </li>
+            <li>
+                <a href="projets-entreprises.html">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="nav-item">Projets d'entreprises</span>
+                </a>
+            </li>
+            <li>
+                <a href="veille.html">
+                    <i class="fas fa-wifi"></i>
+                    <span class="nav-item">Veille</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="active">
+                    <i class="fas fa-phone-alt"></i>
+                    <span class="nav-item">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <div class="contact-container">
+            <h1 class="fade-in">Contactez-moi</h1>
+
+            <div class="contact-wrapper">
+                <div class="contact-info slide-up">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/smail-aries-283bb2299/" target="_blank" rel="noopener noreferrer">
+                                linkedin.com/in/smail-aries
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/ariessmail?tab=repositories" target="_blank" rel="noopener noreferrer">
+                                github.com/ariessmail
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <a href="mailto:aries.smail@proton.me">aries.smail@proton.me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form slide-up" style="animation-delay: 0.3s">
+                    <form id="contactForm">
+                        <h2>Envoyer un message</h2>
+
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required class="">
+                            <label for="name">Nom complet</label>
+                            <span class="focus-border"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required class="">
+                            <label for="email">Email</label>
+                            <span class="focus-border"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" required class=""></textarea>
+                            <label for="message">Message</label>
+                            <span class="focus-border"></span>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span>Envoyer</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fond vidéo (remplacé par un fond dégradé) -->
+    <div id="myVideo"></div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/contact-form.js"></script>
+</body>
+</html>
