@@ -1,0 +1,155 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-header {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradient);
+  margin-right: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img i {
+  font-size: 50px;
+  color: white;
+}
+
+.profile-info h2 {
+  margin-bottom: 5px;
+  font-size: 2.2rem;
+}
+
+.profile-info h3 {
+  font-weight: 400;
+  color: #ccc;
+  font-size: 1.3rem;
+}
+
+.profile-body {
+  padding: 30px;
+}
+
+.profile-body p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.skills {
+  margin-bottom: 30px;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.skill-bar {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: var(--gradient);
+  border-radius: 10px;
+  position: relative;
+  animation: fillBar 1.5s ease-out forwards;
+  width: 0;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--width, 80%); }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.button i {
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    flex-direction: column;
+  }
+  
+  .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .profile-info h2 {
+    font-size: 1.8rem;
+  }
+  
+  .profile-info h3 {
+    font-size: 1.1rem;
+  }
+}

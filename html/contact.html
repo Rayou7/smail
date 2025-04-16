@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portfolio de ARIES SMAIL - BTS SIO SISR">
+    <meta name="author" content="ARIES SMAIL">
+    <title>Portfolio de ARIES SMAIL (BTS SIO 2024)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a class="logo">
+                    <img src="/data/img/menu.png" alt="Logo menu">
+                    <span class="nav-item">Menu</span>
+                </a>
+            </li>
+            <li>
+                <a href="/html/index.html">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-item">Accueil</span>
+                </a>
+            </li>
+            <li>
+                <a href="/html/parcours.html">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-item">Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="/html/bts-sio.html">
+                    <i class="fas fa-wallet"></i>
+                    <span class="nav-item">BTS SIO</span>
+                </a>
+            </li>
+            <li>
+                <a href="/html/documentation.html">
+                    <i class="fas fa-chart-bar"></i>
+                    <span class="nav-item">Projets scolaires</span>
+                </a>
+            </li>
+            <li>
+                <a href="/html/projets-d'entreprises.html">
+                    <i class="fas fa-folder"></i>
+                    <span class="nav-item">Projets d'entreprises</span>
+                </a>
+            </li>
+            <li>
+                <a href="/html/veille.html">
+                    <i class="fas fa-wifi"></i>
+                    <span class="nav-item">Veille</span>
+                </a>
+            </li>
+            <li>
+                <a href="/html/contact.html" class="active">
+                    <i class="fas fa-phone"></i>
+                    <span class="nav-item">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="contact-container">
+            <h1 class="fade-in">Contactez-moi</h1>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info slide-up">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/smail-aries-283bb2299/" target="_blank" rel="noopener noreferrer">linkedin.com/in/smail-aries</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/ariessmail?tab=repositories" target="_blank" rel="noopener noreferrer">github.com/ariessmail</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <a href="mailto:aries.smail@proton.me">aries.smail@proton.me</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form slide-up" style="animation-delay: 0.3s;">
+                    <form id="contactForm">
+                        <h2>Envoyer un message</h2>
+                        
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Nom complet</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Message</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span>Envoyer</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <video autoplay muted loop id="myVideo">
+        <source src="/data/video/background.mp4.mov" type="video/mp4">
+    </video>
+    
+    <script src="/js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupération des valeurs
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Ici, vous pourriez ajouter du code pour envoyer les données à un serveur
+            // Pour l'instant, on simule juste une réponse
+            
+            // Animation de soumission
+            const submitBtn = this.querySelector('.submit-btn');
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                // Réinitialisation du formulaire
+                this.reset();
+                
+                // Message de confirmation
+                alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
+                
+                // Restauration du bouton
+                submitBtn.innerHTML = '<span>Envoyer</span><i class="fas fa-paper-plane"></i>';
+                submitBtn.disabled = false;
+                
+                // Réinitialisation des labels
+                document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
+                    input.classList.remove('has-value');
+                });
+            }, 1500);
+        });
+        
+        // Gestion des labels flottants
+        document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.classList.add('has-value');
+            });
+            
+            input.addEventListener('blur', () => {
+                if (input.value === '') {
+                    input.classList.remove('has-value');
+                }
+            });
+            
+            // Vérifier si le champ a déjà une valeur (par exemple après un rechargement de page)
+            if (input.value !== '') {
+                input.classList.add('has-value');
+            }
+        });
+    </script>
+</body>
+</html>
